@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <style type="text/css">
+  ol{margin:0;padding:0}
+  table td,table th{padding:0}
+  .c19{border-right-style:solid;padding:-2.2pt -2.2pt -2.2pt -2.2pt;border-bottom-color:#000000;border-top-width:0pt;border-right-width:0pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:0pt;width:64.5pt;border-top-color:#000000;border-bottom-style:solid}
+  .c5{border-right-style:solid;padding:7.2pt 7.2pt 7.2pt 7.2pt;border-bottom-color:#cccccc;border-top-width:0pt;border-right-width:0pt;border-left-color:#cccccc;vertical-align:top;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:0pt;width:708.8pt;border-top-color:#cccccc;border-bottom-style:solid}
+  .c17{border-right-style:solid;padding:7.2pt 7.2pt 7.2pt 7.2pt;border-bottom-color:#cccccc;border-top-width:0pt;border-right-width:0pt;border-left-color:#cccccc;vertical-align:top;border-right-color:#cccccc;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:0pt;width:708.8pt;border-top-color:#cccccc;border-bottom-style:solid}
+  .c8{border-right-style:solid;padding:-2.2pt -2.2pt -2.2pt -2.2pt;border-bottom-color:#000000;border-top-width:0pt;border-right-width:0pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:0pt;width:432pt;border-top-color:#000000;border-bottom-style:solid}
+  .c1{border-right-style:solid;padding:7.2pt 7.2pt 7.2pt 7.2pt;border-bottom-color:#cccccc;border-top-width:0pt;border-right-width:0pt;border-left-color:#cccccc;vertical-align:top;border-right-color:#cccccc;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:0pt;width:53.2pt;border-top-color:#cccccc;border-bottom-style:solid}
+  .c16{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:26pt;font-family:"Arial";font-style:normal}
+  .c12{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Arial";font-style:normal}
+  .c14{color:#ff00ff;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Arial";font-style:normal}
+  .c2{color:#ff00ff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Arial";font-style:normal}
+  .c0{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:10pt;font-family:"Arial";font-style:normal}
+  .c24{padding-top:0pt;padding-bottom:3pt;line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}
+  .c11{padding-top:0pt;padding-bottom:0pt;line-height:1.15;orphans:2;widows:2;text-align:left}
+  .c4{padding-top:0pt;padding-bottom:0pt;line-height:1.15;text-align:right;}
+  .c25{padding-top:0pt;padding-bottom:0pt;line-height:1.15;text-align:right;letter-spacing: 0.05em}
+
+  .c23{margin-left:0.8pt;border-spacing:0;border-collapse:collapse;margin-right:auto}
+  .c13{padding-top:0pt;padding-bottom:0pt;line-height:1.15;text-align:left}
+  .c3{padding-top:0pt;padding-bottom:0pt;line-height:1.0;text-align:left}
+  .c25{border-spacing:0;border-collapse:collapse;margin-right:auto}
+  .c6{text-decoration-skip-ink:none;-webkit-text-decoration-skip:none;color:#1155cc;text-decoration:underline}
+  .c20{background-color:#ffffff;padding:72pt 72pt 72pt 72pt}
+  .c21{color:#ff00ff;font-weight:700}
+  .c7{color:inherit;text-decoration:inherit}
+  .c9{height:0pt}
+  .c18{font-style:italic}
+  .c10{height:11pt}
+  .c22{font-weight:700}
+  .c15{margin-right:106.5pt}.title{padding-top:0pt;color:#000000;font-size:26pt;padding-bottom:3pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}.subtitle{padding-top:0pt;color:#666666;font-size:15pt;padding-bottom:16pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}li{color:#000000;font-size:11pt;font-family:"Arial"}p{margin:0;color:#000000;font-size:11pt;font-family:"Arial"}h1{padding-top:20pt;color:#000000;font-size:20pt;padding-bottom:6pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h2{padding-top:18pt;color:#000000;font-size:16pt;padding-bottom:6pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h3{padding-top:16pt;color:#434343;font-size:14pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h4{padding-top:14pt;color:#666666;font-size:12pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h5{padding-top:12pt;color:#666666;font-size:11pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h6{padding-top:12pt;color:#666666;font-size:11pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;font-style:italic;orphans:2;widows:2;text-align:left}
+  </style>
+  <title></title>
+</head>
+<body class="c20 doc-content">
+  <p class="c11"><span>Once upon a time Apple had “Develop: The Apple Technical Journal”, which was a phenomenal printed magazine put out by Apple Engineers and</span> <span class="c6"><a class="c7" href="https://www.google.com/url?q=https://developer.apple.com/support/technical/&amp;sa=D&amp;source=editors&amp;ust=1747271062770625&amp;usg=AOvVaw3AaWaGRn4FXbrgQlwQZzm9">DTS</a></span><span>&nbsp;specifically targeted at Apple Developers. It was in print quarterly from January 1990 to March 1997 with 29 editions, most of which were over 100 pages long and were chock full of high quality technical information about Apple’s platforms. The</span> <span class="c6"><a class="c7" href="https://www.google.com/url?q=https://vintageapple.org/develop/pdf/develop-09_9201_Winter_1992.pdf&amp;sa=D&amp;source=editors&amp;ust=1747271062770991&amp;usg=AOvVaw26hahFjxgzVdOfyhod22jH">Winter 1992 edition</a></span><span>&nbsp;introduced “Kon & Bal’s Puzzle Page” which was written</span> <span>by the infamous Konstantin</span><span class="c12">&nbsp;Othmer and Bruce Leak (with occasional guest writers). It was always done in the form of a dialog between engineers as they solved a problem. It was my favorite part of Develop even though I don’t think I ever scored higher than a zero. Recently we stumbled upon something that we thought was worthy of a Puzzle Page, and hopefully KON and BAL will appreciate this homage.</span></p>
+  <p class="c11 c10"></p>
+  <hr>
+  <p class="c11 c10"></p>
+  <p class="c11 c10"></p>
+  <p class="c11"><span class="c12">Dave & Mark’s Puzzle Page</span></p>
+  <p class="c11 c10"></p>
+  <p class="c24 title" id="h.rj2jxzixvooa"><span class="c16">Please Don’t Mock Me</span></p>
+  <p class="c11 c10"></p>
+  <p class="c11"><span class="c18">See if you can solve this programming puzzle, presented in the form of a dialog between Dave MacLachlan (DAVE) and Mark Griffith (MARK). The dialog gives clues to help you. Keep guessing until you're done; your score is the number to the left of the clue that gave you the correct answer. These problems are supposed to be tough. If you don't get a high score, at least you'll learn interesting Apple trivia.</span></p>
+  <p class="c11 c10"></p>
+  <table class="c23">
+    <tr class="c9">
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c13 c10"></p>
+      </td>
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4"><span>MARK</span></p>
+      </td>
+      <td class="c5" colspan="1" rowspan="1">
+        <p class="c3"><span>We are finally getting around to moving some of our older Objective-C tests from x86_64 to ARM64 and ran into a crasher that only seems to show up on Apple Silicon and only happens about 1-2% of runs on our CI machines. We haven’t been able to repro it locally at all. These tests are pretty old and have some serious</span><span><a class="c7" href="https://www.google.com/url?q=https://ocmock.org/&amp;sa=D&amp;source=editors&amp;ust=1747271062773279&amp;usg=AOvVaw2c9wuBAsUV-3h8X9Wi_qSo">&nbsp;</a></span><span class="c6"><a class="c7" href="https://www.google.com/url?q=https://ocmock.org/&amp;sa=D&amp;source=editors&amp;ust=1747271062773343&amp;usg=AOvVaw073HaklS66z0lFcWFdad9T">https://ocmock.org/</a></span><span>&nbsp;dependencies that we haven’t cleaned up. It seems to be happening when we are deallocating a mock and the crash log records it as a</span> <span class="c22">EXC_BAD_ACCESS (SIGSEGV) - KERN_INVALID_ADDRESS (possible pointer authentication failure)</span><span class="c12">.</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c13 c10"></p>
+      </td>
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c25"><span>DAVE</span></p>
+      </td>
+      <td class="c5" colspan="1" rowspan="1">
+        <p class="c3"><span>“Possible</span><span><a class="c7" href="https://www.google.com/url?q=https://developer.apple.com/documentation/security/preparing-your-app-to-work-with-pointer-authentication?language%3Dobjc&amp;sa=D&amp;source=editors&amp;ust=1747271062774105&amp;usg=AOvVaw268k09t0oZcTjH9ptXD8VZ">&nbsp;</a></span><span class="c6"><a class="c7" href="https://www.google.com/url?q=https://developer.apple.com/documentation/security/preparing-your-app-to-work-with-pointer-authentication?language%3Dobjc&amp;sa=D&amp;source=editors&amp;ust=1747271062774217&amp;usg=AOvVaw2-2ZyDBGRlvlk2mwN-Gdf1">pointer authentication</a></span><span class="c12">&nbsp;failure?” Are you doing something crazy with ARM64e?</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c13 c10"></p>
+      </td>
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4"><span>MARK</span></p>
+      </td>
+      <td class="c5" colspan="1" rowspan="1">
+        <p class="c3"><span class="c12">No ARM64e at play.</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c10 c13"></p>
+      </td>
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c25"><span>DAVE</span></p>
+      </td>
+      <td class="c5" colspan="1" rowspan="1">
+        <p class="c3"><span class="c12">Phew. Sounds like a threading problem. Have you tried running it against tsan?</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4 c10"></p>
+      </td>
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4"><span>MARK</span></p>
+      </td>
+      <td class="c5" colspan="1" rowspan="1">
+        <p class="c3"><span>We’ve tried all the sans:</span><span><a class="c7" href="https://www.google.com/url?q=https://clang.llvm.org/docs/ThreadSanitizer.html&amp;sa=D&amp;source=editors&amp;ust=1747271062775499&amp;usg=AOvVaw3p-juvEUg-KwrwjMRVr-ee">&nbsp;</a></span><span class="c6"><a class="c7" href="https://www.google.com/url?q=https://clang.llvm.org/docs/ThreadSanitizer.html&amp;sa=D&amp;source=editors&amp;ust=1747271062775554&amp;usg=AOvVaw3KXJhV6xeT2AtANdTwZm-v">tsan</a></span><span>,</span><span><a class="c7" href="https://www.google.com/url?q=https://clang.llvm.org/docs/AddressSanitizer.html&amp;sa=D&amp;source=editors&amp;ust=1747271062775614&amp;usg=AOvVaw1jAb8G4ncO1ZV47FKTLxjK">&nbsp;</a></span><span class="c6"><a class="c7" href="https://www.google.com/url?q=https://clang.llvm.org/docs/AddressSanitizer.html&amp;sa=D&amp;source=editors&amp;ust=1747271062775662&amp;usg=AOvVaw23y54hKlkoEnNMXbwt8p7r">asan</a></span><span>,</span><span><a class="c7" href="https://www.google.com/url?q=https://clang.llvm.org/docs/MemorySanitizer.html&amp;sa=D&amp;source=editors&amp;ust=1747271062775715&amp;usg=AOvVaw0OxeXU0qB173JGWNwfV1DH">&nbsp;</a></span><span class="c6"><a class="c7" href="https://www.google.com/url?q=https://clang.llvm.org/docs/MemorySanitizer.html&amp;sa=D&amp;source=editors&amp;ust=1747271062775760&amp;usg=AOvVaw0kiXVjFlCedrLg33kzAbCD">msan</a></span><span>,</span><span><a class="c7" href="https://www.google.com/url?q=https://clang.llvm.org/docs/UndefinedBehaviorSanitizer.html&amp;sa=D&amp;source=editors&amp;ust=1747271062775818&amp;usg=AOvVaw1lXxJ3Ruh6u3mivF_dMzdH">&nbsp;</a></span><span class="c6"><a class="c7" href="https://www.google.com/url?q=https://clang.llvm.org/docs/UndefinedBehaviorSanitizer.html&amp;sa=D&amp;source=editors&amp;ust=1747271062775872&amp;usg=AOvVaw0rhLnJhxjzBROHc9XEpQWx">ubsan</a></span><span>, and even</span><span><a class="c7" href="https://www.google.com/url?q=https://www.google.com/search?q%3Dcomic%2Bsans&amp;sa=D&amp;source=editors&amp;ust=1747271062775932&amp;usg=AOvVaw2j3_G2QXDB8ixFxdXp4xOL">&nbsp;</a></span><span class="c6"><a class="c7" href="https://www.google.com/url?q=https://www.google.com/search?q%3Dcomic%2Bsans&amp;sa=D&amp;source=editors&amp;ust=1747271062775982&amp;usg=AOvVaw3ijFjoWVwHWlrkN5KFew4C">comic sans</a></span><span class="c12">&nbsp;with no luck. Honestly this test has pretty much only one thread running.</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4 c10"></p>
+      </td>
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c25"><span>DAVE</span></p>
+      </td>
+      <td class="c5" colspan="1" rowspan="1">
+        <p class="c3"><span>OCMock is compiled with</span><span><a class="c7" href="https://www.google.com/url?q=https://clang.llvm.org/docs/AutomaticReferenceCounting.html&amp;sa=D&amp;source=editors&amp;ust=1747271062776508&amp;usg=AOvVaw2Hs6nMP7GnVDWpEFSIxt9o">&nbsp;</a></span><span class="c6"><a class="c7" href="https://www.google.com/url?q=https://clang.llvm.org/docs/AutomaticReferenceCounting.html&amp;sa=D&amp;source=editors&amp;ust=1747271062776589&amp;usg=AOvVaw1zbGJOR_jyoNVyWizISaXM">Automatic Reference Counting</a></span><span>&nbsp;(ARC) disabled. Have you tried some of the “classic” tools like</span><span><a class="c7" href="https://www.google.com/url?q=https://www.manpagez.com/man/3/libgmalloc/&amp;sa=D&amp;source=editors&amp;ust=1747271062776706&amp;usg=AOvVaw26bRRj1K8PD-2o39cpSTh9">&nbsp;</a></span><span class="c6"><a class="c7" href="https://www.google.com/url?q=https://www.manpagez.com/man/3/libgmalloc/&amp;sa=D&amp;source=editors&amp;ust=1747271062776758&amp;usg=AOvVaw3H19NnGJnkEtJZl0kmOovd">libgmalloc</a></span><span class="c12">?</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4"><span class="c14">100</span></p>
+      </td>
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4"><span>MARK</span></p>
+      </td>
+      <td class="c5" colspan="1" rowspan="1">
+        <p class="c3"><span class="c12">At this point we are pretty convinced that it is not a memory smash. The stack and heap seem fine.</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4 c10"></p>
+      </td>
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c25"><span>DAVE</span></p>
+      </td>
+      <td class="c5" colspan="1" rowspan="1">
+        <p class="c3"><span class="c12">OK, so we’ve got an unpredictable bug that is not a threading bug. Any signals at play?</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4 c10"></p>
+      </td>
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4"><span>MARK</span></p>
+      </td>
+      <td class="c5" colspan="1" rowspan="1">
+        <p class="c3"><span class="c12">No sign of any signal handlers.</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4 c10"></p>
+      </td>
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c25"><span>DAVE</span></p>
+      </td>
+      <td class="c5" colspan="1" rowspan="1">
+        <p class="c3"><span>OCMock does some crazy magic under the hood. Can you remind me of some of the voodoo it</span> <span>do so</span><span class="c12">&nbsp;well?</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4 c10"></p>
+      </td>
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4"><span>MARK</span></p>
+      </td>
+      <td class="c5" colspan="1" rowspan="1">
+        <p class="c3"><span class="c12">What evils doesn’t OCMock do? Did I mention we have our own special version of OCMock that has deviated from the opensource? Disclosure: all things discussed about OCMock below are our own fault.</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4 c10"></p>
+      </td>
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c25"><span>DAVE</span></p>
+      </td>
+      <td class="c5" colspan="1" rowspan="1">
+        <p class="c3"><span class="c12">No need to remind me, as most of that was my doing. However it has been a while since I dug through the code, so can you jog my memory regarding some of the fun things it does?</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4 c10"></p>
+      </td>
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4"><span>MARK</span></p>
+      </td>
+      <td class="c5" colspan="1" rowspan="1">
+        <p class="c3"><span>Let’s see… Off the top of my head mock objects: inherit from</span><span><a class="c7" href="https://www.google.com/url?q=https://developer.apple.com/documentation/foundation/nsproxy?language%3Dobjc&amp;sa=D&amp;source=editors&amp;ust=1747271062780078&amp;usg=AOvVaw16RDNix_PKn6W30kRwiKyy">&nbsp;</a></span><span class="c6"><a class="c7" href="https://www.google.com/url?q=https://developer.apple.com/documentation/foundation/nsproxy?language%3Dobjc&amp;sa=D&amp;source=editors&amp;ust=1747271062780149&amp;usg=AOvVaw0OUepeTAV6TOOzQPwq_FGi">NSProxy</a></span><span>, make heavy use of associated objects, manipulate the class hierarchy by creating and destroying classes on the fly, dynamically change the size of instances using realloc in the -init method, use message forwarding all over the place and have not one but two APIs for doing all of this. I think it goes without saying that they don’t pass</span><span><a class="c7" href="https://www.google.com/url?q=https://developer.apple.com/app-store/review/guidelines/%23software-requirements&amp;sa=D&amp;source=editors&amp;ust=1747271062780525&amp;usg=AOvVaw1EFtXU5FCSQA30SDfdMlb6">&nbsp;</a></span><span class="c6"><a class="c7" href="https://www.google.com/url?q=https://developer.apple.com/app-store/review/guidelines/%23software-requirements&amp;sa=D&amp;source=editors&amp;ust=1747271062780591&amp;usg=AOvVaw0344u5rI1EV9d5PLibZajG">App Review</a></span><span class="c12">.</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4"><span class="c14">95</span></p>
+      </td>
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c25"><span>DAVE</span></p>
+      </td>
+      <td class="c5" colspan="1" rowspan="1">
+        <p class="c3"><span class="c12">Righto. Seems like there may be some fertile ground for bugs in there. Getting back to that stack trace, what is it doing when things go boom?</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4 c10"></p>
+      </td>
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4"><span>MARK</span></p>
+      </td>
+      <td class="c5" colspan="1" rowspan="1">
+        <p class="c3"><span class="c12">The mock object is attempting to release one of its member variables (remember non ARC here!).</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4 c10"></p>
+      </td>
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c25"><span>DAVE</span></p>
+      </td>
+      <td class="c5" colspan="1" rowspan="1">
+        <p class="c3"><span>So there’s this fun little toy called</span><span><a class="c7" href="https://www.google.com/url?q=https://help.apple.com/instruments/mac/current/%23/dev612e6956&amp;sa=D&amp;source=editors&amp;ust=1747271062782043&amp;usg=AOvVaw0DV8wHP7rh7FUo0PRhgXZu">&nbsp;</a></span><span class="c6"><a class="c7" href="https://www.google.com/url?q=https://help.apple.com/instruments/mac/current/%23/dev612e6956&amp;sa=D&amp;source=editors&amp;ust=1747271062782117&amp;usg=AOvVaw1_WyGPel8R30BR1B1NgqPv">NSZombieEnabled</a></span><span class="c12">&nbsp;that will tell you if OCMock is overreleasing things.</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4 c10"></p>
+      </td>
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4"><span>MARK</span></p>
+      </td>
+      <td class="c5" colspan="1" rowspan="1">
+        <p class="c3"><span class="c12">It is a zombie, but we went through the code and all of the retains and releases seem to be right. The member variable is basically only initialized in -init and released in -dealloc.</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4"><span class="c14">90</span></p>
+      </td>
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c25"><span>DAVE</span></p>
+      </td>
+      <td class="c5" colspan="1" rowspan="1">
+        <p class="c3"><span>You can turn on</span><span><a class="c7" href="https://www.google.com/url?q=https://developer.apple.com/library/archive/documentation/Performance/Conceptual/ManagingMemory/Articles/MallocDebug.html&amp;sa=D&amp;source=editors&amp;ust=1747271062783306&amp;usg=AOvVaw0lptDkxwZuFiGE9L0SpBUy">&nbsp;</a></span><span class="c6"><a class="c7" href="https://www.google.com/url?q=https://developer.apple.com/library/archive/documentation/Performance/Conceptual/ManagingMemory/Articles/MallocDebug.html&amp;sa=D&amp;source=editors&amp;ust=1747271062783411&amp;usg=AOvVaw2MFTUWbwS5NRalXD6cGVb4">MallocStackLogging</a></span><span>&nbsp;and use</span><span><a class="c7" href="https://www.google.com/url?q=https://keith.github.io/xcode-man-pages/malloc_history.1.html&amp;sa=D&amp;source=editors&amp;ust=1747271062783481&amp;usg=AOvVaw00ffoYCycEX4qWcH52qYgr">&nbsp;</a></span><span class="c6"><a class="c7" href="https://www.google.com/url?q=https://keith.github.io/xcode-man-pages/malloc_history.1.html&amp;sa=D&amp;source=editors&amp;ust=1747271062783547&amp;usg=AOvVaw2hb2m2VKrabFKFqcUl5J82">malloc_history</a></span><span class="c12">&nbsp;to find out where the object was created and destroyed.</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4 c10"></p>
+      </td>
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4"><span>MARK</span></p>
+      </td>
+      <td class="c5" colspan="1" rowspan="1">
+        <p class="c3"><span class="c12">The stack traces showed us that it was created once in -init, but was destroyed in two separate calls to -dealloc.</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4"><span class="c14">85</span></p>
+      </td>
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c25"><span>DAVE</span></p>
+      </td>
+      <td class="c5" colspan="1" rowspan="1">
+        <p class="c3"><span class="c12">Woah.. does OCMock do something funky with -init?</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4 c10"></p>
+      </td>
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4"><span>MARK</span></p>
+      </td>
+      <td class="c5" colspan="1" rowspan="1">
+        <p class="c3"><span class="c12">Yeah, there are cases where mock objects can get -init called on them twice if folks are stubbing -init and/or +alloc.</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4 c10"></p>
+      </td>
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c25"><span>DAVE</span></p>
+      </td>
+      <td class="c5" colspan="1" rowspan="1">
+        <p class="c3"><span class="c12">How do we know if we are being initialized a second time?</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4 c10"></p>
+      </td>
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4"><span>MARK</span></p>
+      </td>
+      <td class="c5" colspan="1" rowspan="1">
+        <p class="c3"><span>Our mock objects do this fun thing where they store their instance variables in an associated object using</span><span><a class="c7" href="https://www.google.com/url?q=https://developer.apple.com/documentation/objectivec/objc_setassociatedobject(_:_:_:_:)?language%3Dobjc&amp;sa=D&amp;source=editors&amp;ust=1747271062811383&amp;usg=AOvVaw160YuQ4jSDh1xEgwOcyAy6">&nbsp;</a></span><span class="c6"><a class="c7" href="https://www.google.com/url?q=https://developer.apple.com/documentation/objectivec/objc_setassociatedobject(_:_:_:_:)?language%3Dobjc&amp;sa=D&amp;source=editors&amp;ust=1747271062811505&amp;usg=AOvVaw2mgluOdUpPspXpvNgnXWeF">objc_setAssociatedObject</a></span><span>&nbsp;and a unique key. In -init we check for the associated object, and if we have one, we know that we’ve already been initialized so we can short circuit and just return</span><span><a class="c7" href="https://www.google.com/url?q=https://useyourloaf.com/blog/understanding-your-objective-c-self/?source%3Dpost_page-----4d6ae0b8f86c---------------------------------------&amp;sa=D&amp;source=editors&amp;ust=1747271062811765&amp;usg=AOvVaw2RKeml2GoPewhPMqlZYxdV">&nbsp;</a></span><span class="c6"><a class="c7" href="https://www.google.com/url?q=https://useyourloaf.com/blog/understanding-your-objective-c-self/?source%3Dpost_page-----4d6ae0b8f86c---------------------------------------&amp;sa=D&amp;source=editors&amp;ust=1747271062811858&amp;usg=AOvVaw2RwhK6GJ5s_07tOH0nZi2I">self</a></span><span class="c12">.</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4"><span class="c14">80</span></p>
+      </td>
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c25"><span>DAVE</span></p>
+      </td>
+      <td class="c5" colspan="1" rowspan="1">
+        <p class="c3"><span class="c12">Are we stubbing -init or +alloc anywhere?</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4 c10"></p>
+      </td>
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4"><span>MARK</span></p>
+      </td>
+      <td class="c5" colspan="1" rowspan="1">
+        <p class="c3"><span class="c12">No, but to save a question or two, -init is short circuiting in the cases that crash.</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4"><span class="c14">75</span></p>
+      </td>
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c25"><span>DAVE</span></p>
+      </td>
+      <td class="c5" colspan="1" rowspan="1">
+        <p class="c3"><span class="c12">So that explains our crash and the over-release, but now we have a new problem. So we are creating a brand new object using standard alloc/init, immediately checking to see if it has an associated object with a unique key, and occasionally it returns something? That’s beyond odd. How do associated objects work?</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4 c10"></p>
+      </td>
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4"><span>MARK</span></p>
+      </td>
+      <td class="c5" colspan="1" rowspan="1">
+        <p class="c3"><span>We cracked open the</span><span><a class="c7" href="https://www.google.com/url?q=https://github.com/apple-oss-distributions/objc4/tree/objc4-940.4&amp;sa=D&amp;source=editors&amp;ust=1747271062813798&amp;usg=AOvVaw2zjsSlq6jdHVk2m9JmOdWR">&nbsp;</a></span><span class="c6"><a class="c7" href="https://www.google.com/url?q=https://github.com/apple-oss-distributions/objc4/tree/objc4-940.4&amp;sa=D&amp;source=editors&amp;ust=1747271062813875&amp;usg=AOvVaw2jFeieado-OWlIXhX7AalH">libobjc sources</a></span><span>&nbsp;and found that each process has a</span><span><a class="c7" href="https://www.google.com/url?q=https://github.com/apple-oss-distributions/objc4/blob/f126469408dc82bd3f327217ae678fd0e6e3b37c/runtime/objc-references.mm%23L110&amp;sa=D&amp;source=editors&amp;ust=1747271062813996&amp;usg=AOvVaw1WAshT_3obEhgg4jT3ebA0">&nbsp;</a></span><span class="c6"><a class="c7" href="https://www.google.com/url?q=https://github.com/apple-oss-distributions/objc4/blob/f126469408dc82bd3f327217ae678fd0e6e3b37c/runtime/objc-references.mm%23L110&amp;sa=D&amp;source=editors&amp;ust=1747271062814155&amp;usg=AOvVaw0eLyReyxe-0krP0yahynfu">singleton map of “owning” objects to a map of keys to the “associated” objects</a></span><span>. These maps are implemented using a</span><span><a class="c7" href="https://www.google.com/url?q=https://github.com/apple-oss-distributions/objc4/blob/objc4-940.4/runtime/llvm-DenseMap.h&amp;sa=D&amp;source=editors&amp;ust=1747271062814265&amp;usg=AOvVaw2P2nnsv4vrZGXbdOpdv6tG">&nbsp;</a></span><span class="c6"><a class="c7" href="https://www.google.com/url?q=https://github.com/apple-oss-distributions/objc4/blob/objc4-940.4/runtime/llvm-DenseMap.h&amp;sa=D&amp;source=editors&amp;ust=1747271062814357&amp;usg=AOvVaw1fw6WH2363elPpdvh0v8Xt">DenseMap “borrowed” from LLVM</a></span><span>. Just to make things really fun they use a “</span><span class="c6"><a class="c7" href="https://www.google.com/url?q=https://github.com/apple-oss-distributions/objc4/blob/f126469408dc82bd3f327217ae678fd0e6e3b37c/runtime/objc-private.h%23L1052&amp;sa=D&amp;source=editors&amp;ust=1747271062814499&amp;usg=AOvVaw0l6kb7foavv9i0a7IAs0yS">disguised pointer</a></span><span class="c12">” to put things in the map.</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4"><span class="c14">70</span></p>
+      </td>
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c25"><span>DAVE</span></p>
+      </td>
+      <td class="c5" colspan="1" rowspan="1">
+        <p class="c3"><span class="c12">A singleton map? I assume it has a lock around it to protect it from the perils of multithreading?</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4 c10"></p>
+      </td>
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4"><span>MARK</span></p>
+      </td>
+      <td class="c5" colspan="1" rowspan="1">
+        <p class="c3"><span>Yes sir… locked up tighter than</span><span><a class="c7" href="https://www.google.com/url?q=https://www.nbcnews.com/tech/elon-musk/musk-trump-fan-flames-fort-knox-gold-conspiracy-theory-rcna199354&amp;sa=D&amp;source=editors&amp;ust=1747271062815494&amp;usg=AOvVaw3VlQXvUgMvdhnLnTIMEbeW">&nbsp;</a></span><span class="c6"><a class="c7" href="https://www.google.com/url?q=https://www.nbcnews.com/tech/elon-musk/musk-trump-fan-flames-fort-knox-gold-conspiracy-theory-rcna199354&amp;sa=D&amp;source=editors&amp;ust=1747271062815579&amp;usg=AOvVaw2YCfWxXMfzTrxaTBNFoUcw">Fort Knox</a></span><span class="c12">.</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4 c10"></p>
+      </td>
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c25"><span>DAVE</span></p>
+      </td>
+      <td class="c5" colspan="1" rowspan="1">
+        <p class="c3"><span class="c12">How old is that LLVM code?</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4 c10"></p>
+      </td>
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4"><span>MARK</span></p>
+      </td>
+      <td class="c5" colspan="1" rowspan="1">
+        <p class="c3"><span>Pretty old.</span><span><a class="c7" href="https://www.google.com/url?q=https://github.com/llvm/llvm-project/commit/266f6347dbb837ea9f008b628666c086d0618d5b%23diff-e96824b8138bd1a8a6516c11830d30a951603102b39258d6d5234e3fe0ed195b&amp;sa=D&amp;source=editors&amp;ust=1747271062816502&amp;usg=AOvVaw3JVLur9ajrqX27d5MordpL">&nbsp;</a></span><span class="c6"><a class="c7" href="https://www.google.com/url?q=https://github.com/llvm/llvm-project/commit/266f6347dbb837ea9f008b628666c086d0618d5b%23diff-e96824b8138bd1a8a6516c11830d30a951603102b39258d6d5234e3fe0ed195b&amp;sa=D&amp;source=editors&amp;ust=1747271062816644&amp;usg=AOvVaw1eDAxASAu8P9CjsqA9v2Hq">From poking around in Github it looks like 2019</a></span><span class="c12">.</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4"><span class="c14">65</span></p>
+      </td>
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c25"><span>DAVE</span></p>
+      </td>
+      <td class="c5" colspan="1" rowspan="1">
+        <p class="c3"><span class="c12">Any chance there have been any fixes since then with something like “fixed major hashing bug in Dense Map” in the title?</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4 c10"></p>
+      </td>
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4"><span>MARK</span></p>
+      </td>
+      <td class="c5" colspan="1" rowspan="1">
+        <p class="c3"><span class="c12">No, no major changes to DenseMap that we can see, and we assume LLVM and clang would have sussed out any problems in DenseMap long ago.</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4"><span class="c14">60</span></p>
+      </td>
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c25"><span>DAVE</span></p>
+      </td>
+      <td class="c5" colspan="1" rowspan="1">
+        <p class="c3"><span>OK, so back to associated objects. What happens if we call</span><span><a class="c7" href="https://www.google.com/url?q=https://developer.apple.com/documentation/objectivec/objc_removeassociatedobjects(_:)?language%3Dobjc&amp;sa=D&amp;source=editors&amp;ust=1747271062818161&amp;usg=AOvVaw32VF7owQHp-y3YCE8tpvtr">&nbsp;</a></span><span class="c6"><a class="c7" href="https://www.google.com/url?q=https://developer.apple.com/documentation/objectivec/objc_removeassociatedobjects(_:)?language%3Dobjc&amp;sa=D&amp;source=editors&amp;ust=1747271062818269&amp;usg=AOvVaw1ipHKAIv0hlzyZEUi1YYdc">objc_removeAssociatedObjects</a></span><span>&nbsp;in -init just before we call</span><span><a class="c7" href="https://www.google.com/url?q=https://developer.apple.com/documentation/objectivec/objc_getassociatedobject(_:_:)?language%3Dobjc&amp;sa=D&amp;source=editors&amp;ust=1747271062818440&amp;usg=AOvVaw1pfZPICN9sxsfCCgQooccl">&nbsp;</a></span><span class="c6"><a class="c7" href="https://www.google.com/url?q=https://developer.apple.com/documentation/objectivec/objc_getassociatedobject(_:_:)?language%3Dobjc&amp;sa=D&amp;source=editors&amp;ust=1747271062818544&amp;usg=AOvVaw3WlKFpfCRi-XgWVahPHfCO">objc_getAssociatedObject</a></span><span class="c12">? That is supposed to restore us to a “pristine state” according to the docs.</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4 c10"></p>
+      </td>
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4"><span>MARK</span></p>
+      </td>
+      <td class="c5" colspan="1" rowspan="1">
+        <p class="c3"><span class="c12">objc_getAssociatedObject still returns an object.</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4"><span class="c14">55</span></p>
+      </td>
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c25"><span>DAVE</span></p>
+      </td>
+      <td class="c5" colspan="1" rowspan="1">
+        <p class="c3"><span>Huh? Obviously Apple and I have different definitions for the word “</span><span class="c6"><a class="c7" href="https://www.google.com/url?q=https://www.merriam-webster.com/dictionary/pristine%23:~:text%3DThus%252C%2520%2522pristine%2522%2520was%2520extended,mean%2520%2522fresh%2520and%2520clean.%2522&amp;sa=D&amp;source=editors&amp;ust=1747271062819622&amp;usg=AOvVaw2dp49PicxkPuPTkOfLusuf">pristine</a></span><span class="c12">”. So we clear out all the associated objects and we still get an associated object? What horror is this? What do the sources for objc_removeAssociatedObjects look like?</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4 c10"></p>
+      </td>
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4"><span>MARK</span></p>
+      </td>
+      <td class="c5" colspan="1" rowspan="1">
+        <p class="c3"><span>Well objc_removeAssociatedObjects</span><span><a class="c7" href="https://www.google.com/url?q=https://github.com/apple-oss-distributions/objc4/blob/f126469408dc82bd3f327217ae678fd0e6e3b37c/runtime/objc-runtime.mm%23L743&amp;sa=D&amp;source=editors&amp;ust=1747271062820257&amp;usg=AOvVaw3NSfpArLIFyZYncf_iuI0t">&nbsp;</a></span><span class="c6"><a class="c7" href="https://www.google.com/url?q=https://github.com/apple-oss-distributions/objc4/blob/f126469408dc82bd3f327217ae678fd0e6e3b37c/runtime/objc-runtime.mm%23L743&amp;sa=D&amp;source=editors&amp;ust=1747271062820416&amp;usg=AOvVaw0d39399pA79LbgYxpQoSr3">checks if the object has associated objects, and if it does it removes them</a></span><span class="c12">.</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4"><span class="c14">50</span></p>
+      </td>
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c25"><span>DAVE</span></p>
+      </td>
+      <td class="c5" colspan="1" rowspan="1">
+        <p class="c3"><span class="c12">So the name fits. How does it know if an object has associated objects?</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4 c10"></p>
+      </td>
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4"><span>MARK</span></p>
+      </td>
+      <td class="c5" colspan="1" rowspan="1">
+        <p class="c3"><span>It appears that the</span><span><a class="c7" href="https://www.google.com/url?q=https://github.com/apple-oss-distributions/objc4/blob/f126469408dc82bd3f327217ae678fd0e6e3b37c/runtime/objc-object.h%23L477&amp;sa=D&amp;source=editors&amp;ust=1747271062821279&amp;usg=AOvVaw1Z2G11njaDck4r8_5bpbKj">&nbsp;</a></span><span class="c6"><a class="c7" href="https://www.google.com/url?q=https://github.com/apple-oss-distributions/objc4/blob/f126469408dc82bd3f327217ae678fd0e6e3b37c/runtime/objc-object.h%23L477&amp;sa=D&amp;source=editors&amp;ust=1747271062821395&amp;usg=AOvVaw2icIoAV-VbUqIwVfjNSyhb">check for associated objects</a></span><span class="c12">&nbsp;is an optimization that only seems to be at play when using non pointer ISAs (pronounced “is a” as in this object “is a” instance of this class).</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4"><span class="c14">45</span></p>
+      </td>
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c25"><span>DAVE</span></p>
+      </td>
+      <td class="c5" colspan="1" rowspan="1">
+        <p class="c3"><span class="c12">Non pointer ISAs? It’s been a looooong time. Can you give me the TL;DR on ISAs again?</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4 c10"></p>
+      </td>
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4"><span>MARK</span></p>
+      </td>
+      <td class="c5" colspan="1" rowspan="1">
+        <p class="c3"><span>At the dawn of (32 bit Objective C) history, an ISA pointer pointed to the class object for an instance. When we went 64 bit, Apple runtime engineers got excited with all the room they had and started shoving all sorts of things into the</span><span><a class="c7" href="https://www.google.com/url?q=https://github.com/apple-oss-distributions/objc4/blob/objc4-940.4/runtime/isa.h&amp;sa=D&amp;source=editors&amp;ust=1747271062822566&amp;usg=AOvVaw25RnbsSiiklwLncEEgfuA1">&nbsp;</a></span><span class="c6"><a class="c7" href="https://www.google.com/url?q=https://github.com/apple-oss-distributions/objc4/blob/objc4-940.4/runtime/isa.h&amp;sa=D&amp;source=editors&amp;ust=1747271062822635&amp;usg=AOvVaw1FM-Ut4936Lunf7VLDiDl3">ISA</a></span><span>&nbsp;including some bits to track weak references, associated objects and reference counts. You will be shocked to find out that these fancy ISAs are called non-pointer ISAs because they aren’t really pointers. You can actually disable them at runtime by setting the environment variable</span><span><a class="c7" href="https://www.google.com/url?q=https://gist.github.com/dmaclach/d9ed160e0f1d5537cc5f96cc50663780&amp;sa=D&amp;source=editors&amp;ust=1747271062822959&amp;usg=AOvVaw3Rc6Nw5aDfLhrmgJO-zjPR">&nbsp;</a></span><span class="c6"><a class="c7" href="https://www.google.com/url?q=https://gist.github.com/dmaclach/d9ed160e0f1d5537cc5f96cc50663780&amp;sa=D&amp;source=editors&amp;ust=1747271062823037&amp;usg=AOvVaw3-zRJ7G65ICeH0mrTVnMH8">OBJC_DISABLE_NONPOINTER_ISA</a></span><span class="c12">&nbsp;to 1.</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4"><span class="c14">40</span></p>
+      </td>
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c25"><span>DAVE</span></p>
+      </td>
+      <td class="c5" colspan="1" rowspan="1">
+        <p class="c3"><span class="c12">Cute. So if we do the fancy bit twiddling to look at the “associated objects bit” for our object what do we see?</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4 c10"></p>
+      </td>
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4"><span>MARK</span></p>
+      </td>
+      <td class="c5" colspan="1" rowspan="1">
+        <p class="c3"><span class="c12">It’s 0 before the call to objc_removeAssociatedObjects, 0 after the call to objc_removeAssociatedObjects, and 0 after the call to objc_setAssociatedObject.</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4"><span class="c14">35</span></p>
+      </td>
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c25"><span>DAVE</span></p>
+      </td>
+      <td class="c5" colspan="1" rowspan="1">
+        <p class="c3"><span class="c12">The first two I expected, but the third one? When does this silly bit get toggled?</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4 c10"></p>
+      </td>
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4"><span>MARK</span></p>
+      </td>
+      <td class="c5" colspan="1" rowspan="1">
+        <p class="c3"><span class="c12">It gets toggled in objc_setAssociatedObject if and only if this is the first time something is being associated with the object.</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4"><span class="c14">30</span></p>
+      </td>
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c25"><span>DAVE</span></p>
+      </td>
+      <td class="c5" colspan="1" rowspan="1">
+        <p class="c3"><span class="c12">Which I assume it figures out by querying the singleton DenseMap that we already established is locked down tight. What happens if we manually set the associated objects bit before we call objc_removeAssociatedObjects?</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4 c10"></p>
+      </td>
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4"><span>MARK</span></p>
+      </td>
+      <td class="c5" colspan="1" rowspan="1">
+        <p class="c3"><span class="c12">Then it becomes 0 after the call to objc_removeAssocatedObjects and switches to a 1 after the call to objc_setAssociatedObject.</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4"><span class="c14">25</span></p>
+      </td>
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c25"><span>DAVE</span></p>
+      </td>
+      <td class="c5" colspan="1" rowspan="1">
+        <p class="c3"><span class="c12">Finally we are almost back to some sanity. So something is not cleaning itself up from the global associated map correctly. Who is responsible for tidying it up?</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4 c10"></p>
+      </td>
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4"><span>MARK</span></p>
+      </td>
+      <td class="c5" colspan="1" rowspan="1">
+        <p class="c3"><span class="c12">Well, objc_removeAssociatedObjects will do it (assuming the bit is set correctly). The other obvious place is any object you deallocate removes itself from the map.</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4"><span class="c14">20</span></p>
+      </td>
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c25"><span>DAVE</span></p>
+      </td>
+      <td class="c5" colspan="1" rowspan="1">
+        <p class="c3"><span class="c12">Is this some weird side effect of forgetting to call [super dealloc] somewhere?</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4 c10"></p>
+      </td>
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4"><span>MARK</span></p>
+      </td>
+      <td class="c5" colspan="1" rowspan="1">
+        <p class="c3"><span>Good thought, but no,</span><span><a class="c7" href="https://www.google.com/url?q=https://github.com/apple-oss-distributions/objc4/blob/f126469408dc82bd3f327217ae678fd0e6e3b37c/runtime/runtime.h%23L887&amp;sa=D&amp;source=editors&amp;ust=1747271062827772&amp;usg=AOvVaw0ZtZPB_6w4lPFOPyNDUuil">&nbsp;</a></span><span class="c6"><a class="c7" href="https://www.google.com/url?q=https://github.com/apple-oss-distributions/objc4/blob/f126469408dc82bd3f327217ae678fd0e6e3b37c/runtime/runtime.h%23L887&amp;sa=D&amp;source=editors&amp;ust=1747271062827882&amp;usg=AOvVaw25TjTy_TtgD1vhb_pl28GT">objc_destructInstance</a></span><span class="c12">&nbsp;is called after -dealloc has been called on the object, and the docs clearly state that objc_destructInstance “removes any associated references this instance might have had.”</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4 c10"></p>
+      </td>
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c25"><span>DAVE</span></p>
+      </td>
+      <td class="c5" colspan="1" rowspan="1">
+        <p class="c3"><span class="c12">I assume objc_destructInstance checks the magic bit before attempting to remove it from the map?</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4 c10"></p>
+      </td>
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4"><span>MARK</span></p>
+      </td>
+      <td class="c17" colspan="1" rowspan="1">
+        <p class="c3"><span>Yes.</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4"><span class="c14">15</span></p>
+      </td>
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c25"><span>DAVE</span></p>
+      </td>
+      <td class="c5" colspan="1" rowspan="1">
+        <p class="c3"><span class="c12">So we are either looking for some random neutrino that just happen to toggle this one specific bit in a complex structure in multiple different objects *or* we have a type of object that doesn’t deallocate properly.</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4 c10"></p>
+      </td>
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4"><span>MARK</span></p>
+      </td>
+      <td class="c5" colspan="1" rowspan="1">
+        <p class="c3"><span class="c12">Seems that way.</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4"><span class="c14">10</span></p>
+      </td>
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c25"><span>DAVE</span></p>
+      </td>
+      <td class="c5" colspan="1" rowspan="1">
+        <p class="c3"><span class="c12">Just to check, does OCMock ever do anything fancy with the ISA pointer?</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4 c10"></p>
+      </td>
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4"><span>MARK</span></p>
+      </td>
+      <td class="c5" colspan="1" rowspan="1">
+        <p class="c3"><span class="c12">This is the one place that even OCMock is afraid to touch.</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4 c10"></p>
+      </td>
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c25"><span>DAVE</span></p>
+      </td>
+      <td class="c5" colspan="1" rowspan="1">
+        <p class="c3"><span class="c12">OK, so I’m going to take “types of objects that don’t deallocate properly” for $200 Mark. What types of things are we assigning associated objects to in our OCMock codebase?</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4"><span class="c14">5</span></p>
+      </td>
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4"><span>MARK</span></p>
+      </td>
+      <td class="c5" colspan="1" rowspan="1">
+        <p class="c3"><span class="c12">Well, we mentioned mock objects already. We also associate an object with the classes that we create to mark them as “classes created by OCMock”.</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4 c10"></p>
+      </td>
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c25"><span>DAVE</span></p>
+      </td>
+      <td class="c5" colspan="1" rowspan="1">
+        <p class="c3"><span class="c12">Hold on.. How are those classes created and destroyed?</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4 c10"></p>
+      </td>
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4"><span>MARK</span></p>
+      </td>
+      <td class="c5" colspan="1" rowspan="1">
+        <p class="c3"><span>Using</span><span><a class="c7" href="https://www.google.com/url?q=https://developer.apple.com/documentation/objectivec/objc_allocateclasspair(_:_:_:)?language%3Dobjc&amp;sa=D&amp;source=editors&amp;ust=1747271062832420&amp;usg=AOvVaw11GYnltxKkaY0F_Oj8qUov">&nbsp;</a></span><span class="c6"><a class="c7" href="https://www.google.com/url?q=https://developer.apple.com/documentation/objectivec/objc_allocateclasspair(_:_:_:)?language%3Dobjc&amp;sa=D&amp;source=editors&amp;ust=1747271062832522&amp;usg=AOvVaw0Nf_Ig0uH_bA3GjLrq_6_o">objc_allocateClassPair</a></span><span>&nbsp;and</span><span><a class="c7" href="https://www.google.com/url?q=https://developer.apple.com/documentation/objectivec/objc_disposeclasspair(_:)?language%3Dobjc&amp;sa=D&amp;source=editors&amp;ust=1747271062832599&amp;usg=AOvVaw0Aofnusfm8lLioVogAEO0m">&nbsp;</a></span><span class="c6"><a class="c7" href="https://www.google.com/url?q=https://developer.apple.com/documentation/objectivec/objc_disposeclasspair(_:)?language%3Dobjc&amp;sa=D&amp;source=editors&amp;ust=1747271062832689&amp;usg=AOvVaw3liNT37TsJ4lIZZDrmnKMr">objc_disposeClassPair</a></span><span class="c12">&nbsp;of course.</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4"><span class="c14">0</span></p>
+      </td>
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c25"><span>DAVE</span></p>
+      </td>
+      <td class="c5" colspan="1" rowspan="1">
+        <p class="c3"><span class="c12">What happens if we create a class pair, associate an object with the class and then dispose of the class pair? Does the object get destroyed?</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4 c10"></p>
+      </td>
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4"><span>MARK</span></p>
+      </td>
+      <td class="c5" colspan="1" rowspan="1">
+        <p class="c3"><span class="c12">Well heavens to betsy, the object is still alive and kicking.</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4 c10"></p>
+      </td>
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c25"><span>DAVE</span></p>
+      </td>
+      <td class="c5" colspan="1" rowspan="1">
+        <p class="c3"><span class="c12">Aha! The jig is up! Classes don’t clean up their associated objects. So the chain of events that has to happen is that a class pair must be created, an object associated with it, the class pair destroyed and then another new object allocated at the same address as the previously existing class pair. In that weird and wonderful case our new object would end up having an associated object, but doesn’t get the associated bit set so you can’t clear it using standard APIs unless you know the exact key. It’s technically not an OCMock bug, but I can’t imagine a lot of other folks are doing anything like this on a regular basis.</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c13 c10"></p>
+      </td>
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4"><span>MARK</span></p>
+      </td>
+      <td class="c5" colspan="1" rowspan="1">
+        <p class="c3"><span>It turns out that it’s a rare enough case that we never saw it pop up on x86_64 and apparently it just happens to be more likely on ARM64. Once you know what to do, it’s an easy repro case. We filled</span><span><a class="c7" href="https://www.google.com/url?q=https://openradar.appspot.com/FB17596679&amp;sa=D&amp;source=editors&amp;ust=1747271062835100&amp;usg=AOvVaw0rkEBWfi3fjKsNdtDXItjA">&nbsp;</a></span><span class="c6"><a class="c7" href="https://www.google.com/url?q=https://openradar.appspot.com/FB17596679&amp;sa=D&amp;source=editors&amp;ust=1747271062835159&amp;usg=AOvVaw2hXAZgsIdO3pXG3juKjgeI">FB17596679</a></span><span>&nbsp;with Apple. It also turns out that it’s “Google OCMock” specific as the OCMock maintainer</span><span><a class="c7" href="https://www.google.com/url?q=https://github.com/erikdoe/ocmock/pull/448&amp;sa=D&amp;source=editors&amp;ust=1747271062835291&amp;usg=AOvVaw3mEj6FHHRvRDvC2DZFGxI5">&nbsp;</a></span><span class="c6"><a class="c7" href="https://www.google.com/url?q=https://github.com/erikdoe/ocmock/pull/448&amp;sa=D&amp;source=editors&amp;ust=1747271062835363&amp;usg=AOvVaw01NrrO62pxBFZU0Po3meVJ">took the concept of our patch</a></span><span class="c12">&nbsp;to mark classes as “created by OCMock”, but they dodged a bullet that they never saw coming as they implemented it in a way that didn’t use objc_setAssociatedObject on a class.</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c13 c10"></p>
+      </td>
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c25"><span>DAVE</span></p>
+      </td>
+      <td class="c17" colspan="1" rowspan="1">
+        <p class="c3"><span>Nasty.</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c13 c10"></p>
+      </td>
+      <td class="c1" colspan="1" rowspan="1">
+        <p class="c4"><span>MARK</span></p>
+      </td>
+      <td class="c17" colspan="1" rowspan="1">
+        <p class="c3"><span>Yeah.</span></p>
+      </td>
+    </tr>
+  </table>
+  <p class="c11 c10"></p>
+  <hr>
+  <p class="c11 c10"></p>
+  <p class="c11 c10"></p>
+  <p class="c11"><span class="c21">SCORING</span></p>
+  <table class="c25">
+    <tr class="c9">
+      <td class="c19" colspan="1" rowspan="1">
+        <p class="c11"><span class="c12">80–100</span></p>
+      </td>
+      <td class="c8" colspan="1" rowspan="1">
+        <p class="c11"><span class="c12">Welcome honored objc runtime Apple engineer to our modest web page.</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c19" colspan="1" rowspan="1">
+        <p class="c11"><span class="c12">50–70</span></p>
+      </td>
+      <td class="c8" colspan="1" rowspan="1">
+        <p class="c11"><span class="c12">You’ve associated with some weird objects in your time.</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c19" colspan="1" rowspan="1">
+        <p class="c11"><span class="c12">25–45</span></p>
+      </td>
+      <td class="c8" colspan="1" rowspan="1">
+        <p class="c11"><span class="c12">Too much Swift coding is making you soft.</span></p>
+      </td>
+    </tr>
+    <tr class="c9">
+      <td class="c19" colspan="1" rowspan="1">
+        <p class="c11"><span class="c12">5–20</span></p>
+      </td>
+      <td class="c8" colspan="1" rowspan="1">
+        <p class="c11"><span>Admit it: your first thought on hearing “isa” was</span> <span class="c6"><a class="c7" href="https://www.google.com/url?q=https://starwars.fandom.com/wiki/Jar_Jar_Binks&amp;sa=D&amp;source=editors&amp;ust=1747271062837650&amp;usg=AOvVaw0RTloAzyzOXVJXky53Dfjf">Jar Jar Binks</a></span><span class="c12">.</span></p>
+      </td>
+    </tr>
+  </table>
+  <p class="c11 c10"></p>
+  <p class="c11 c10 c15"></p>
+</body>
+</html>
