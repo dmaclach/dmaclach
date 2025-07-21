@@ -122,7 +122,7 @@ Otherwise what actually gets rendered using actool can get very confusing.
 
 Put your vector image in `All Scales`. Create a 1x1 pixel png. Use that for the 1x/2x/3x images. Make sure that `preserves-vector-representation` is set. In this configuration unless you explicitly request a 1x1 pixel image, your vector will be used, but actool won’t raster it.
 
-[!NOTE]
+**Note**
 You cannot do this trick with `svg` files. It only works for `pdfs`. I do not know why. You may want to consider using [svg2pdf](https://github.com/dmaclach/svg2pdf) to convert your `svg` files to `pdf`. `FB13735188`
 
 [!NOTE]
