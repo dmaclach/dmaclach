@@ -31,6 +31,9 @@ With a raster image, actool will generate a single raster at 1x scale
 
 With a vector image, actool will generate 1x, 2x and 3x rasters. If `preserves-vector-representation` is set, it will record the vector data from the single image.
 
+> [!NOTE]
+> When I first tested this (probably back in Xcode 15 days) `preserves-vector-representation` appeared to do something. With Xcode 16 and Xcode 26 it appears that actool ALWAYS preserves vector data. [FB18982777]
+
 ### Scale: Individual Scales
 
 ![](images/image3.png)
@@ -52,7 +55,7 @@ You will get an error/warning if you attempt to put a raster in the ‘All Scale
 If you have a vector in the All Scales slot, actool will generate rasters for the scales that have them assigned (whether it be raster or vector data) and then the vector from All Scales for the other slots. 
 
 > [!IMPORTANT]
-> If `preserves-vector-representation` is set, actool will keep the vector in the `All Scales` slot **unless** you have vector data in the 2x or 3x slots. In this case it will > preserve the vector data in the highest scale slot. So if you have a `star1.svg` in `All > Scales`, `star2.png` in 2x and `star3.svg` in 3x, it will generate the 1x raster from `star1.svg`, the 2x raster from `star2.png`, the 3x raster from `star3.svg` and keep the > `star3.svg` data as the preserved vector data.
+> If `preserves-vector-representation` is set, actool will keep the vector in the `All Scales` slot **unless** you have vector data in the 2x or 3x slots. In this case it will preserve the vector data in the highest scale slot. So if you have a `star1.svg` in `All Scales`, `star2.png` in 2x and `star3.svg` in 3x, it will generate the 1x raster from `star1.svg`, the 2x raster from `star2.png`, the 3x raster from `star3.svg` and keep the `star3.svg` data as the preserved vector data.
 
 > [!NOTE]
 > There is a super weird case if you have vector data in “All scales”, 1x and 3x, `actool` fails with `ERROR: Identical key for two renditions.`
@@ -79,11 +82,17 @@ If you do not have `preserves-vector-representation` set on the imageset, the im
 
 If you have `preserves-vector-representation` set on the imageset, the image will be the scaled raster image appropriate for the display if the image requested is the exact dimensions of the raster, otherwise it will draw using the preserved vector data. So if you have a raster that is 400x400 pixels on a 2x display, and you have a 200x200 point imageview, it will use the raster. If the imageview is 201x200 points, it will use the preserved vector.
 
+> [!NOTE]
+> See note above about Xcode 16 and 26 ignoring `preserves-vector-representation`.
+
 ### Swift UI
 
 If you do not have `preserves-vector-representation` set on the imageset, the image will be the scaled image appropriate for the display.
 
 If you have `preserves-vector-representation` set on the imageset, Swift UI appears to only use the vector data no matter what size of image is requested.
+
+> [!NOTE]
+> See note above about Xcode 16 and 26 ignoring `preserves-vector-representation`.
 
 ## How Size Attributes Are Calculated For Vector Images:
 
