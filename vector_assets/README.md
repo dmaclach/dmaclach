@@ -17,7 +17,9 @@ of `.car` files.
 
 Officially `actool` supports `PDF` and `SVG` as vector formats. Some of the Apple documentation hasn’t been updated to mention SVG support.
 
-## How images are generated at compile time
+## How Images Are Generated At Compile Time
+
+Image generation depends heavily on the `Scale` option in Xcode.
 
 ![](images/image1.png)
 
@@ -51,8 +53,8 @@ If you have a vector in the All Scales slot, actool will generate rasters for th
 
 There is a super weird case if you have vector data in “All scales”, 1x and 3x, `actool` fails with `ERROR: Identical key for two renditions.`
 
-### Summary
-This table attempts to outline all of the tested cases (`preserves-vector-representation` is set in all cases).
+#### Summary
+This table attempts to outline all of the tested cases for `Individual and Single Scales` (`preserves-vector-representation` is set in every case).
 
 
 | Inputs |  |  |  | Outputs |  |  |  | Feedback filed |
@@ -65,7 +67,7 @@ This table attempts to outline all of the tested cases (`preserves-vector-repres
 | vector1 | vector2 | empty | empty | vector2 at 1x | vector1at 2x | vector1at 3x | vector1 |  |
 | vector1 | vector2 | empty | vector3 | \#error | \#error | \#error | \#error | FB13736032 |
 
-## How images are selected at render time
+## How Images Are Selected At Render Time
 
 ### UIKit
 
@@ -79,21 +81,21 @@ If you do not have `preserves-vector-representation` set on the imageset, the im
 
 If you have `preserves-vector-representation` set on the imageset, Swift UI appears to only use the vector data no matter what size of image is requested.
 
-## How size attributes are calculated for vector images:
+## How Size Attributes Are Calculated For Vector Images:
 
 ### SVG
 
-actool first attempts to use the `\<svg height/width\>` tags if they exist. It then looks for a `\<svg viewbox\>`. Finally if neither of these exist it will fall back to the rendered artwork bounds.
+`actool` first attempts to use the `<svg height/width>` tags if they exist. It then looks for a `<svg viewbox>`. Finally if neither of these exist it will fall back to the rendered artwork bounds.
 
 ### PDF
 
-actool first attempts to use the mediabox if it exists, and then falls back to the rendered artwork bounds.
+`actool` first attempts to use the mediabox if it exists, and then falls back to the rendered artwork bounds.
 
-## How actool rasters vector images
+## How `actool` Rasters Vector Images
 
-When vector images are rendered to rasters by actool they are rendered at multiples of the size attributes.
+When vector images are rendered to rasters by `actool` they are rendered at multiples of the size attributes.
 
-This means though that if you have a SVG file with 5000x5000 as its size values that you are going to get a 5000x5000 (@1x), a 10000x10000 (@2x) and a 15000x15000 (@3x) image created and compiled into your car file. A 15000x15000 image is a 225 megapixel image that is almost certainly never going to get rendered. Between the 3 image sizes you have roughly 350 mega pixels (225 @3x, 100 @2x and 25 @1x) for actool to compress, and then those images live in your car file. Even with asset stripping most of your users are going to end up with either the 2x or 3x images on their devices.
+This means that if you have an `SVG` file with 5000x5000 as its size values that you are going to get a 5000x5000 (@1x), a 10000x10000 (@2x) and a 15000x15000 (@3x) image created and compiled into your car file. A 15000x15000 image is a 225 megapixel image that is almost certainly never going to get rendered. Between the 3 image sizes you have roughly 350 mega pixels (225 @3x, 100 @2x and 25 @1x) for `actool` to compress, and then those images live in your `car` file. Even with asset stripping most of your users are going to end up with either the 2x or 3x images on their devices.
 
 # Some Best Practices
 
@@ -120,7 +122,9 @@ Otherwise what actually gets rendered using actool can get very confusing.
 
 Put your vector image in `All Scales`. Create a 1x1 pixel png. Use that for the 1x/2x/3x images. Make sure that `preserves-vector-representation` is set. In this configuration unless you explicitly request a 1x1 pixel image, your vector will be used, but actool won’t raster it.
 
-Note: You cannot do this trick with `svg` files. It only works for `pdfs`. I do not know why. You may want to consider using [svg2pdf](https://github.com/dmaclach/svg2pdf) to convert your `svg` files to `pdf`. `FB13735188`
+[!NOTE]
+You cannot do this trick with `svg` files. It only works for `pdfs`. I do not know why. You may want to consider using [svg2pdf](https://github.com/dmaclach/svg2pdf) to convert your `svg` files to `pdf`. `FB13735188`
 
-Note: Putting your vector image in the 3x slot and hoping that it will raster at ⅔ and ⅓ sizes for the 1x and 2x slots does not appear to work.
+[!NOTE]
+Putting your vector image in the 3x slot and hoping that it will raster at ⅔ and ⅓ sizes for the 1x and 2x slots does not appear to work.
 
