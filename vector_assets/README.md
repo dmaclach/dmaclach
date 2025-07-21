@@ -31,6 +31,9 @@ With a raster image, actool will generate a single raster at 1x scale
 
 With a vector image, actool will generate 1x, 2x and 3x rasters. If `preserves-vector-representation` is set, it will record the vector data from the single image.
 
+> [!NOTE]
+> When I first tested this (probably back in Xcode 15 days) `preserves-vector-representation` appeared to do something. With Xcode 16 and Xcode 26 it appears that actool ALWAYS preserves vector data. [FB18982777]
+
 ### Scale: Individual Scales
 
 ![](images/image3.png)
@@ -79,11 +82,17 @@ If you do not have `preserves-vector-representation` set on the imageset, the im
 
 If you have `preserves-vector-representation` set on the imageset, the image will be the scaled raster image appropriate for the display if the image requested is the exact dimensions of the raster, otherwise it will draw using the preserved vector data. So if you have a raster that is 400x400 pixels on a 2x display, and you have a 200x200 point imageview, it will use the raster. If the imageview is 201x200 points, it will use the preserved vector.
 
+> [!NOTE]
+> See note above about Xcode 16 and 26 ignoring `preserves-vector-representation`
+
 ### Swift UI
 
 If you do not have `preserves-vector-representation` set on the imageset, the image will be the scaled image appropriate for the display.
 
 If you have `preserves-vector-representation` set on the imageset, Swift UI appears to only use the vector data no matter what size of image is requested.
+
+> [!NOTE]
+> See note above about Xcode 16 and 26 ignoring `preserves-vector-representation`
 
 ## How Size Attributes Are Calculated For Vector Images:
 
