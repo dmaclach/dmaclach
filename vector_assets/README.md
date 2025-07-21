@@ -52,7 +52,7 @@ You will get an error/warning if you attempt to put a raster in the ‘All Scale
 If you have a vector in the All Scales slot, actool will generate rasters for the scales that have them assigned (whether it be raster or vector data) and then the vector from All Scales for the other slots. 
 
 > [!IMPORTANT]
-> If preserves-vector-representation is set, actool will keep the vector in the `All Scales` slot **unless** you have vector data in the 2x or 3x slots. In this case it will > preserve the vector data in the highest scale slot. So if you have a `star1.svg` in `All > Scales`, `star2.png` in 2x and `star3.svg` in 3x, it will generate the 1x raster from `star1.svg`, the 2x raster from `star2.png`, the 3x raster from `star3.svg` and keep the > `star3.svg` data as the preserved vector data.
+> If `preserves-vector-representation` is set, actool will keep the vector in the `All Scales` slot **unless** you have vector data in the 2x or 3x slots. In this case it will > preserve the vector data in the highest scale slot. So if you have a `star1.svg` in `All > Scales`, `star2.png` in 2x and `star3.svg` in 3x, it will generate the 1x raster from `star1.svg`, the 2x raster from `star2.png`, the 3x raster from `star3.svg` and keep the > `star3.svg` data as the preserved vector data.
 
 > [!NOTE]
 > There is a super weird case if you have vector data in “All scales”, 1x and 3x, `actool` fails with `ERROR: Identical key for two renditions.`
