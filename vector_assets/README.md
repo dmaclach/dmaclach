@@ -32,7 +32,7 @@ With a raster image, actool will generate a single raster at 1x scale
 With a vector image, actool will generate 1x, 2x and 3x rasters. If `preserves-vector-representation` is set, it will record the vector data from the single image.
 
 > [!NOTE]
-> When I first tested this (probably back in Xcode 15 days) `preserves-vector-representation` appeared to do something. With Xcode 16 and Xcode 26 it appears that actool ALWAYS preserves vector data. [FB18982777]
+> When I first tested this (on Xcode 15.3) `preserves-vector-representation` appeared to do something. With Xcode 16 and Xcode 26 it appears that actool *ALWAYS* preserves vector data. [FB18982777]
 
 ### Scale: Individual Scales
 
